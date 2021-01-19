@@ -60,6 +60,6 @@ std::string infix2postfix(std::string s1) {
     while (!operstack.isEmpty()) {
         res = res + operstack.pop() + " ";
     }
-	res.pop_back();
+    res.pop_back();
     return res;
 }
