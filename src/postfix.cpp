@@ -27,7 +27,7 @@ std::string infix2postfix(std::string s1) {
                 num = "";
             }
             continue;
-        }	
+        }
         if (isNum(s1[i])) {
             num += s1[i];
         }
@@ -45,7 +45,8 @@ std::string infix2postfix(std::string s1) {
             operstack.pop();
         }
         if (priorit(s1[i]) == 2 || priorit(s1[i]) == 3) {
-            if (operstack.isEmpty() || priorit(operstack.get()) < priorit(s1[i])) {
+            if (operstack.isEmpty() ||
+                priorit(operstack.get()) < priorit(s1[i])) {
                 operstack.push(s1[i]);
             } else {
                 res = res + operstack.pop() + " ";
@@ -59,5 +60,6 @@ std::string infix2postfix(std::string s1) {
     while (!operstack.isEmpty()) {
         res = res + operstack.pop() + " ";
     }
+	res.pop_back();
     return res;
 }
