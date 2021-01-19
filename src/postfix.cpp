@@ -16,7 +16,7 @@ int priorit(char sign) {
 bool isNum(char elem) {
     return (elem >= '0' && elem <= '9' || elem == '.');
 }
-std::string infix2prefix(std::string s1) {
+std::string infix2postfix(std::string s1) {
     MyStack<char> operstack(10);
     std::string res = "";
     std::string num = "";

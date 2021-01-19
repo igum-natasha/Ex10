@@ -5,6 +5,5 @@
 #include <iostream>
 #include <string>
 
-std::string infix2prefix(std::string s1);
+std::string infix2postfix(std::string s1);
 #endif  // INCLUDE_POSTFIX_H_
-
